@@ -160,7 +160,7 @@ namespace CsvHelper.Tests.AutoMapping
 
 				var data = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id,Name");
 				expected.AppendLine("1,one");
 
@@ -194,7 +194,7 @@ namespace CsvHelper.Tests.AutoMapping
 
 				var data = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("AId,BId");
 				expected.AppendLine("1,2");
 
@@ -220,7 +220,7 @@ namespace CsvHelper.Tests.AutoMapping
 				csv.WriteRecords(list);
 				writer.Flush();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id,Name");
 				expected.AppendLine("1,one");
 
@@ -242,7 +242,7 @@ namespace CsvHelper.Tests.AutoMapping
 				csv.WriteRecords(list);
 				writer.Flush();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id,Name");
 				expected.AppendLine("1,one");
 

@@ -563,7 +563,7 @@ namespace CsvHelper.Tests
 				stream.Position = 0;
 
 				var data = reader.ReadToEnd();
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id");
 				expected.AppendLine("1");
 
@@ -723,7 +723,7 @@ namespace CsvHelper.Tests
 				stream.Position = 0;
 
 				var text = reader.ReadToEnd();
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("FirstName,LastName,HomeAddress.Street,HomeAddress.City,HomeAddress.State,HomeAddress.Zip,WorkAddress.Street,WorkAddress.City,WorkAddress.State,WorkAddress.Zip");
 				expected.AppendLine("first,last,home street,home city,home state,home zip,work street,work city,work state,work zip");
 				Assert.AreEqual(expected.ToString(), text);

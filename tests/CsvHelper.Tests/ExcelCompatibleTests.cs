@@ -186,7 +186,7 @@ namespace CsvHelper.Tests
 		public void ParseFieldMissingQuoteGoesToEndOfFileTest()
 		{
 			using (var stream = new MemoryStream())
-			using (var writer = new StreamWriter(stream))
+			using (var writer = new TestStreamWriter(stream))
 			using (var reader = new StreamReader(stream))
 			using (var parser = new CsvParser(reader, CultureInfo.InvariantCulture))
 			{

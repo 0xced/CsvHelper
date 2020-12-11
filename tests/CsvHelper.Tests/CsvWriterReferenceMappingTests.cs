@@ -54,7 +54,7 @@ namespace CsvHelper.Tests
 
 				var data = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("AId,BId,CId,DId");
 				expected.AppendLine("a1,b1,c1,d1");
 				expected.AppendLine("a2,b2,c2,d2");
@@ -87,7 +87,7 @@ namespace CsvHelper.Tests
 				stream.Position = 0;
 
 				var data = reader.ReadToEnd();
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("AId,BId,CId,DId");
 				expected.AppendLine("1,,,");
 				Assert.AreEqual(expected.ToString(), data);

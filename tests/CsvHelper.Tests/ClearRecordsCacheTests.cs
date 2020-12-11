@@ -73,7 +73,7 @@ namespace CsvHelper.Tests
 
 				var data = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("1");
 				expected.AppendLine("two");
 

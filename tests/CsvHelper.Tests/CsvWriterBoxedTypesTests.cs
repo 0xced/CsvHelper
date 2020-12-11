@@ -36,7 +36,7 @@ namespace CsvHelper.Tests
 				csv.WriteRecords(recordsBoxed);
 				writer.Flush();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("1,one");
 				expected.AppendLine("2,two");
 

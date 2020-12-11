@@ -66,7 +66,7 @@ namespace CsvHelper.Tests.Mappings
 
 				var result = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("IdField,NameField");
 				expected.AppendLine("1,one");
 
@@ -124,7 +124,7 @@ namespace CsvHelper.Tests.Mappings
 
 				var result = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("IdField,NameField");
 				expected.AppendLine("1,one");
 
@@ -178,7 +178,7 @@ namespace CsvHelper.Tests.Mappings
 
 				var result = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("idField,nameField");
 				expected.AppendLine("1,one");
 
@@ -229,7 +229,7 @@ namespace CsvHelper.Tests.Mappings
 
 				var result = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("idField,nameField");
 				expected.AppendLine("1,one");
 
@@ -289,7 +289,7 @@ namespace CsvHelper.Tests.Mappings
 
 				var result = reader.ReadToEnd();
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("IdProp,IdField,NameProp,NameField");
 				expected.AppendLine("2,1,two,one");
 

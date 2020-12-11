@@ -50,7 +50,7 @@ namespace CsvHelper.Tests
 			};
 
 			var writer = new StringWriter();
-			var csv = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(new CultureInfo("uk-UA")) { Delimiter = ";" });
+			var csv = new CsvWriter(writer, new CsvHelper.Configuration.CsvConfiguration(new CultureInfo("uk-UA")) { Delimiter = ";", NewLine = CsvHelper.Configuration.NewLine.CRLF });
 
 			csv.WriteRecords(records);
 

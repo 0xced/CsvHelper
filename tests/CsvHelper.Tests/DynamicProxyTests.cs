@@ -39,7 +39,7 @@ namespace CsvHelper.Tests
 				stream.Position = 0;
 
 				var data = reader.ReadToEnd();
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("id,name");
 				expected.AppendLine("1,name1");
 

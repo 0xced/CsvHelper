@@ -125,7 +125,7 @@ namespace CsvHelper.Tests.Culture
 			using (var stream = new MemoryStream())
 			using (var reader = new StreamReader(stream))
 			using (var writer = new StreamWriter(stream))
-			using (var csvWriter = new CsvWriter(writer, new CultureInfo("en-US")))
+			using (var csvWriter = new CsvWriter(writer, new CsvConfiguration(new CultureInfo("en-US")) { NewLine = NewLine.CRLF }))
 			{
 				csvWriter.Configuration.Delimiter = ",";
 				var options = new TypeConverterOptions { Formats = new string[] { "c" } };
@@ -146,7 +146,7 @@ namespace CsvHelper.Tests.Culture
 			using (var stream = new MemoryStream())
 			using (var reader = new StreamReader(stream))
 			using (var writer = new StreamWriter(stream))
-			using (var csvWriter = new CsvWriter(writer, new CultureInfo("en-US")))
+			using (var csvWriter = new CsvWriter(writer, new CsvConfiguration(new CultureInfo("en-US")) { NewLine = NewLine.CRLF }))
 			{
 				csvWriter.Configuration.Delimiter = ",";
 				var list = new List<Test>
@@ -171,7 +171,7 @@ namespace CsvHelper.Tests.Culture
 			using (var stream = new MemoryStream())
 			using (var reader = new StreamReader(stream))
 			using (var writer = new StreamWriter(stream))
-			using (var csvWriter = new CsvWriter(writer, new CultureInfo("en-US")))
+			using (var csvWriter = new CsvWriter(writer, new CsvConfiguration(new CultureInfo("en-US")) { NewLine = NewLine.CRLF }))
 			{
 				csvWriter.Configuration.Delimiter = ",";
 				var list = new List<Test>

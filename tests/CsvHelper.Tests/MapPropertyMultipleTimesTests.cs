@@ -34,7 +34,7 @@ namespace CsvHelper.Tests
 				writer.Flush();
 				stream.Position = 0;
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id1,Name1,Id2,Name2");
 				expected.AppendLine("1,one,1,one");
 

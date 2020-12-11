@@ -34,7 +34,7 @@ namespace CsvHelper.Tests.Writing
 				writer.Flush();
 				stream.Position = 0;
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("A,B,C");
 				expected.AppendLine("9/6/2017 12:00:00 AM,9/6/2017 12:00:00 AM,9/6/2017 12:00:00 AM");
 

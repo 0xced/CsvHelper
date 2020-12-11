@@ -53,7 +53,7 @@ namespace CsvHelper.Tests.AttributeMapping
 			{
 				csv.WriteRecords(records);
 
-				var expected = new StringBuilder();
+				var expected = new TestStringBuilder(csv.Configuration.NewLineString);
 				expected.AppendLine("Id");
 				expected.AppendLine("1");
 
